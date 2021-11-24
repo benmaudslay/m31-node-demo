@@ -7,8 +7,8 @@ const divide = (num1, num2) => {
 };
 
 module.exports = {
-  add: add,
-  divide: divide,
+  add,
+  divide,
   name: "bensFunctions.js",
   description: "These are some really cool functions",
 };

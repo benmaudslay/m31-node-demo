@@ -1,4 +1,5 @@
 const { add } = require("./bensFunctions");
+const math = require("./math");
 // import { add, divide } from "./bensFunctions.js";
 
-console.log(add(5, 5));
+console.log(math);
