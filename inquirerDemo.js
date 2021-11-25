@@ -1,21 +1,14 @@
 import inquirer from "inquirer"
-
-let questions = [
-  {
-    type: "input",
-    name: "name",
-    message: "What is your name?",
-  },
-  {
-    type: "confirm",
-    name: "confirmation",
-    message: "Is this your real name?",
-  },
-]
+import questions from "./questions.js"
 
 const questionTime = async () => {
   let response = await inquirer.prompt(questions)
+
+  if (!response.confirmation) {
+    response = await inquirer.prompt(questions)
+  }
   console.log(response)
 }
 
 questionTime()
+// console.log(questions)
